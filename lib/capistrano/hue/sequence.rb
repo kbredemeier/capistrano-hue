@@ -19,9 +19,7 @@ module Capistrano
 
             begin
               while true do
-                Thread.new do
-                  light.toggle
-                end
+                light.toggle
                 sleep(2)
               end
             ensure

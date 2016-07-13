@@ -11,6 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Capistrano tasks for using Philips Hue lights as deployment indicator.}
   spec.description   = %q{Capistrano tasks for using Philips Hue lights as deployment indicator.}
+  spec.homepage      = "https://github.com/kbredemeier/capistrano-hue"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
