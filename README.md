@@ -37,6 +37,8 @@ set :hue_light_bulp_id, 1
 set :hue_process_name, 'capistrano-hue'
 ```
 
+You can test your configuration by running `cap <env> hue:start` to start the sequence and `cap <env> hue:stop` to stop the sequence.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies.
