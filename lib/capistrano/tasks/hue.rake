@@ -39,4 +39,5 @@ end
 namespace :deploy do
   before :starting, 'hue:start'
   after :finishing, 'hue:stop'
+  after :failed, 'hue:stop'
 end
