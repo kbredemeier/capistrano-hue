@@ -25,6 +25,11 @@ Add this line to your `Capfile`
 
     require 'capistrano/hue'
 
+## Preperation
+
+Check out the [Getting Started Guide](http://www.developers.meethue.com/documentation/getting-started) to set up an API user on you
+Hue Bridge.
+
 ## Configuration
 
 ```
