@@ -13,17 +13,23 @@ module Capistrano
           end
 
           bulp_opts = options.slice(:hue_bridge_ip, :user_id, :light_bulp_id)
+          color_opts = options.fetch(:color, false)
           light = HueBridge::LightBulp.new(bulp_opts)
+
           pid = Process.fork do
             $PROGRAM_NAME = options[:process_name]
 
+            light.store_state
+            light.on
+            light.set_color(color_opts) if color_opts && color_opts.any?
+
             begin
               while true do
-                light.toggle
-                sleep(2)
+                light.alert
+                sleep(15)
               end
             ensure
-              light.off
+              light.restore_state
             end
           end
           $stdout.puts "Started capistrano-hue process with PID=#{pid}"

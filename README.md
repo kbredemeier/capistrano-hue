@@ -27,8 +27,9 @@ Add this line to your `Capfile`
 
 ## Preperation
 
-Check out the [Getting Started Guide](http://www.developers.meethue.com/documentation/getting-started) to set up an API user on you
+* Check out the [Getting Started Guide](http://www.developers.meethue.com/documentation/getting-started) to set up an API user on you
 Hue Bridge.
+* On OSX need to install `pidof`
 
 ## Configuration
 
@@ -39,6 +40,7 @@ set :hue_enabled, true
 set :hue_bridge_ip, '10.100.198.4'
 set :hue_user_id, '871baa6b48b3a42af620f2509a1f'
 set :hue_light_bulp_id, 1
+set :hue_color, { hue: 1, sat: 1, bri: 1 }
 set :hue_process_name, 'capistrano-hue'
 ```
 
